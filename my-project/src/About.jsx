@@ -3,10 +3,10 @@ import React from 'react'
 function About() {
   return (
     <>
-             <h1 className='text-4xl md:text6xl font-bold text-center bg-blue-700'><span className='text-white'>About</span> <span className='text-blue-500'>Me</span></h1>
-             <p className='text-center  bg-blue-700 text-white'>Get  to know more about my background and passion</p>
+             <h1 className='text-4xl md:text6xl font-bold text-center bg-blue-900'><span className='text-white'>About</span> <span className='text-blue-500'>Me</span></h1>
+             <p className='text-center  bg-blue-900 text-white'>Get  to know more about my background and passion</p>
 
-<section className='min-h-screen bg-blue-700 flex flex-col  md:flex-row  items-center justify-center text-white p-10'>
+<section className='min-h-screen bg-blue-900 flex flex-col  md:flex-row  items-center justify-center text-white p-10'>
    
 
     <div className='mb-8 md:mb-0 md-mr-12  w-full'>

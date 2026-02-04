@@ -1,10 +1,13 @@
 import React from 'react'
-// import Header from './Header'
+import Header from './Header'
 import Navbar from './Navbar'
-import PortfolioHeader from './PortfolioHeader'
+import Home from './Home'
 import About from './About'
 import Skill from './Skill'
 import Project from './Project'
+import ContactForm from './ContactForm'
+import Footer from './Footer'
+
 
 
 function App() {
@@ -12,10 +15,14 @@ function App() {
     <>
     {/* <Header/> */}
  <Navbar/>
- <PortfolioHeader/>
+ <Home/>
  <About/>
  <Skill/>
  <Project/>
+ <ContactForm/>
+ <Footer/>
+ 
+
     </>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 function PortfolioHeader() {
   return (
     <>
-    <section className='min-h-screen bg-blue-700 flex flex-col  md:flex-row  items-center justify-center text-white p-10'>
+    <section className='min-h-screen bg-blue-900 flex flex-col  md:flex-row  items-center justify-center text-white p-10'>
     <div className='mb-8 md:mb-0 md-mr-12  w-full'> 
    <img src="../src/assets/tajwar.jpg"
     className="w-85 h-78 md:h-85 rounded-full shadow-sm mx-auto border-blue-100 border-4"   
