@@ -1,103 +1,59 @@
 import React from 'react'
 
 function Project() {
+  // Yahan images ke sahi naam check karein. 
+  // Agar kisi image ka naam "download.jpg" tha (jo aapne pehle code mein likha tha), 
+  // toh use array mein specific object banakar dena behtar hai.
+  const projects = [
+    { id: 1, title: "Ecom Platform", img: "../src/assets/images (1).jpg" },
+    { id: 2, title: "Portfolio Web", img: "../src/assets/images (2).jpg" },
+    { id: 3, title: "Chat App", img: "../src/assets/images (3).jpg" },
+    { id: 4, title: "Dashboard", img: "../src/assets/images (4).jpg" },
+    { id: 5, title: "Social Media", img: "../src/assets/images (5).jpg" },
+    { id: 6, title: "Web App", img: "../src/assets/download.jpg" }, // Yahan aapka download.jpg wapis aa gaya
+  ];
+
   return (
-    <>
-    
-    <h1 className='text-4xl md:text6xl font-bold text-center bg-blue-900'><span className='text-white'>My</span> <span className='text-blue-500'>Projects</span></h1>
-             <p className='text-center  bg-blue-900 text-white'>A selection of My React Works</p>
+    <div id='project' className='bg-blue-900 min-h-screen py-10 px-4'>
+      <h1 className='text-4xl md:text-6xl font-bold text-center'>
+        <span className='text-white'>My</span> <span className='text-blue-500'>Projects</span>
+      </h1>
+      <p className='text-center text-white mt-2'>A selection of My React Works</p>
 
-            <section className='min-h-screen bg-blue-900  items-center justify-center text-white '>
-{/* div-1 */}
-              <div className='flex w-full justify-center gap-10  '>  
-                <div className='w-80 h-110 rounded-2xl bg-blue-800  inline-block mt-10'> <img src="../src/assets/images (1).jpg" alt="" className='w-full h-60  rounded-t-md' /> <h1 className='text-2xl font-bold  ml-5 mt-4'>Ecomers PlateForm</h1> <p className='ml-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sed?</p>
-               <section className='flex'>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5 hover:cursor-pointer'>React</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>Talliwind</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>MongoDB</button>
-               </section>
-               <section className='flex justify-center gap-10' >
-                <button className='w-25 bg-blue-400 mt-5   rounded-sm  cursor-pointer hover:bg-blue-300'>Demo</button>
-                <button className='w-25 bg-blue-400 mt-5 ml-5 rounded-sm  cursor-pointer hover:bg-blue-300'>Code</button>
+      <section className='max-w-7xl mx-auto mt-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center'>
+          
+          {projects.map((proj) => (
+            <div key={proj.id} className='w-full max-w-[320px] bg-blue-800 rounded-2xl shadow-lg overflow-hidden flex flex-col hover:scale-105 transition-transform duration-300'>
+              {/* Fixed Image Logic */}
+              <img 
+                src={proj.img} 
+                alt={proj.title} 
+                className='w-full h-52 object-cover' 
+                // Agar path galat ho toh ye placeholder image dikhayega
+                onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Project+Coming+Soon' }}
+              />
+              
+              <div className='p-5 flex-grow'>
+                <h1 className='text-2xl font-bold text-white'>{proj.title}</h1>
+                <p className='text-gray-300 text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-               </section>
+                <div className='flex flex-wrap gap-2 mt-4'>
+                  <span className='px-3 py-1 bg-blue-400 text-xs font-bold rounded-full text-blue-900'>React</span>
+                  <span className='px-3 py-1 bg-blue-400 text-xs font-bold rounded-full text-blue-900'>Tailwind</span>
                 </div>
-  {/* div-2 */}
-                <div className='w-80 h-110 rounded-2xl bg-blue-800  mt-10'>
-                   <img src="../src/assets/images (2).jpg" alt="" className='w-full h-60  rounded-t-md' /> <h1 className='text-2xl font-bold  ml-5 mt-4'>Ecomers PlateForm</h1> <p className='ml-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sed?</p>
-               <section className='flex'>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5 hover:cursor-pointer'>React</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>Talliwind</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>MongoDB</button>
-               </section>
-               <section className='flex justify-center gap-10' >
-                <button className='w-25 bg-blue-400 mt-5   rounded-sm  cursor-pointer hover:bg-blue-300'>Demo</button>
-                <button className='w-25 bg-blue-400 mt-5 ml-5 rounded-sm  cursor-pointer hover:bg-blue-300'>Code</button>
 
-               </section>
-                </div>
-{/* div-3 */}
-                <div className='w-80 h-110 rounded-2xl bg-blue-800   mt-10'>
-                   <img src="../src/assets/images (3).jpg" alt="" className='w-full h-60  rounded-t-md' /> <h1 className='text-2xl font-bold  ml-5 mt-4'>Ecomers PlateForm</h1> <p className='ml-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sed?</p>
-               <section className='flex'>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5 hover:cursor-pointer'>React</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>Talliwind</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5' >MongoDB</button>
-               </section>
-               <section className='flex justify-center gap-10' >
-                <button className='w-25 bg-blue-400 mt-5   rounded-sm  cursor-pointer hover:bg-blue-300'>Demo</button>
-                <button className='w-25 bg-blue-400 mt-5 ml-5 rounded-sm  cursor-pointer hover:bg-blue-300'>Code</button>
-
-               </section>
+                <div className='flex justify-between gap-4 mt-6'>
+                  <button className='flex-1 bg-blue-500 hover:bg-blue-400 text-white py-2 rounded-lg font-semibold cursor-pointer'>Demo</button>
+                  <button className='flex-1 border-2 border-blue-400 text-white hover:bg-blue-400 py-2 rounded-lg font-semibold cursor-pointer'>Code</button>
                 </div>
               </div>
-              <div className='flex w-full justify-center gap-10 mt-10'>  
-{/* div-4 */}
-                <div className='w-80 h-110 rounded-2xl bg-blue-800  inline-block'> 
-                   <img src="../src/assets/images (4).jpg" alt="" className='w-full h-60  rounded-t-md' /> <h1 className='text-2xl font-bold  ml-5 mt-4'>Ecomers PlateForm</h1> <p className='ml-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sed?</p>
-               <section className='flex'>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5 hover:cursor-pointer'>React</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>Talliwind</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>MongoDB</button>
-               </section>
-               <section className='flex justify-center gap-10' >
-                <button className='w-25 bg-blue-400 mt-5   rounded-sm  cursor-pointer hover:bg-blue-300'>Demo</button>
-                <button className='w-25 bg-blue-400 mt-5 ml-5 rounded-sm  cursor-pointer hover:bg-blue-300'>Code</button>
+            </div>
+          ))}
 
-               </section>
-                   </div>
-{/* div-5 */}
-                <div className='w-80 h-110 rounded-2xl bg-blue-800 '>
-                   <img src="../src/assets/images (5).jpg" alt="" className='w-full h-60  rounded-t-md' /> <h1 className='text-2xl font-bold  ml-5 mt-4'>Ecomers PlateForm</h1> <p className='ml-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sed?</p>
-               <section className='flex'>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5 hover:cursor-pointer'>React</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>Talliwind</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>MongoDB</button>
-               </section>
-               <section className='flex justify-center gap-10' >
-                <button className='w-25 bg-blue-400 mt-5   rounded-sm  cursor-pointer hover:bg-blue-300'>Demo</button>
-                <button className='w-25 bg-blue-400 mt-5 ml-5 rounded-sm  cursor-pointer hover:bg-blue-300'>Code</button>
-
-               </section>
-                </div>
-{/* div-6 */}
-                <div className='w-80 h-110 rounded-2xl bg-blue-800 '>
-                   <img src="../src/assets/download.jpg" alt="" className='w-full h-60  rounded-t-md' /> <h1 className='text-2xl font-bold  ml-5 mt-4'>Ecomers PlateForm</h1> <p className='ml-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sed?</p>
-               <section className='flex'>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5 hover:cursor-pointer'>React</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>Talliwind</button>
-                  <button className='w-20 bg-blue-400 rounded-4xl mt-3 ml-5'>MongoDB</button>
-               </section>
-               <section className='flex justify-center gap-10' >
-                <button className='w-25 bg-blue-400 mt-5   rounded-sm cursor-pointer hover:bg-blue-300'>Demo</button>
-                <button className='w-25 bg-blue-400 mt-5 ml-5 rounded-sm  cursor-pointer hover:bg-blue-300'>Code</button>
-
-               </section>
-                </div>
-              </div>
-            </section>
-    
-    </>
+        </div>
+      </section>
+    </div>
   )
 }
 

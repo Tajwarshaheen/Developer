@@ -1,26 +1,51 @@
 import React from 'react'
 
 function Skill() {
+  const skills = [
+    { name: "Frontend Developer", icon: "../src/assets/react.svg", desc: "React & Next.js" },
+    { name: "UI Styling", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", desc: "Tailwind CSS" },
+    { name: "Backend Dev", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", desc: "Node.js & Express" },
+    { name: "Database", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", desc: "MongoDB" },
+    { name: "Version Control", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", desc: "Git & GitHub" },
+    { name: "State Management", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", desc: "Redux Toolkit" },
+  ];
+
   return (
- < >
- 
-    <h1 className='text-4xl md:text6xl font-bold text-center bg-blue-900'><span className='text-white'>My</span> <span className='text-blue-500'>Skills</span></h1>
-             <p className='text-center  bg-blue-900 text-white'>Technology | Work with to bring ideas to life</p>
+    <div className='bg-blue-900 min-h-screen py-10 px-5' >
+      {/* Header Section */}
+      <h1 className='text-4xl md:text-6xl font-bold text-center'>
+        <span className='text-white'>My</span> <span className='text-blue-500'>Skills</span>
+      </h1>
+      <p className='text-center text-white mt-2'>Technology | Working with to bring ideas to life</p>
 
-            <section className='min-h-screen bg-blue-900  items-center justify-center text-white '>
+      {/* Skills Grid Container */}
+      <section className='max-w-6xl mx-auto mt-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center'>
+          
+          {skills.map((skill, index) => (
+            <div 
+              key={index} 
+              className='w-full max-w-sm h-60 rounded-2xl bg-blue-800 p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg border border-blue-700'
+            >
+              {/* Skill Icon */}
+              <div className='w-20 h-20 mb-4 bg-blue-900 rounded-full flex items-center justify-center p-4 shadow-inner'>
+                <img 
+                  src={skill.icon} 
+                  alt={skill.name} 
+                  className='w-full h-full object-contain'
+                  onError={(e) => { e.target.src = 'https://via.placeholder.com/80?text=Skill' }} 
+                />
+              </div>
 
-              <div className='flex w-full justify-center gap-10  '>  
-                <div className='w-80 h-60 rounded-2xl bg-blue-800  inline-block mt-10'> <img src="../src/assets/react.svg" alt="" className='mt-5 ml-5' /> <h1  className='ml-30 mb-60'>Fronted Developer </h1> </div>
-                <div className='w-80 h-60 rounded-2xl bg-blue-800  mt-10'>2</div>
-                <div className='w-80 h-60 rounded-2xl bg-blue-800   mt-10'>3</div>
-              </div>
-              <div className='flex w-full justify-center gap-10 mt-10'>  
-                <div className='w-80 h-60 rounded-2xl bg-blue-800  inline-block'> <img src="../src/assets/react.svg" alt="" className='mt-5 ml-5' /> <h1  className='ml-30 mb-60'>Fronted Developer </h1> </div>
-                <div className='w-80 h-60 rounded-2xl bg-blue-800 '>2</div>
-                <div className='w-80 h-60 rounded-2xl bg-blue-800 '>3</div>
-              </div>
-            </section>
- </>
+              {/* Skill Info */}
+              <h1 className='text-xl font-bold text-white'>{skill.name}</h1>
+              <p className='text-blue-300 text-sm mt-1'>{skill.desc}</p>
+            </div>
+          ))}
+
+        </div>
+      </section>
+    </div>
   )
 }
 
