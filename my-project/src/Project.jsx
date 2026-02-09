@@ -14,7 +14,7 @@ function Project() {
   ];
 
   return (
-    <div id='project' className='bg-blue-900 min-h-screen py-10 px-4'>
+    <div  className='bg-blue-900 min-h-screen py-10 px-4' id='projects'>
       <h1 className='text-4xl md:text-6xl font-bold text-center'>
         <span className='text-white'>My</span> <span className='text-blue-500'>Projects</span>
       </h1>
@@ -53,6 +53,7 @@ function Project() {
 
         </div>
       </section>
+  
     </div>
   )
 }

@@ -1,75 +1,45 @@
 import React from 'react';
 
-const ContactForm = () => {
+const ContactPage = () => {
   return (
-    <>
-      {/* Title Section */}
-      <div className='bg-blue-900 pt-10'>
-        <h1 className='text-4xl md:text-6xl font-bold text-center'>
-          <span className='text-white'>Contact</span> <span className='text-blue-500'>Us</span>
-        </h1>
+    <div className="bg-blue-900 min-h-screen text-white">
+      {/* Header */}
+      <div className="py-16 text-center">
+        <h1 className="text-5xl font-extrabold mb-4">Get  <span className='text-blue-500'>In Touch</span></h1>
+        <p className="text-blue-200">Humse rabta karein, hum aapki madad ke liye hazir hain.</p>
       </div>
 
-      <div className="min-h-screen bg-blue-900 flex items-center justify-center p-4 md:p-10">
-        <div className="max-w-md w-full bg-blue-800 rounded-3xl shadow-2xl overflow-hidden">
-          <div className="p-6">
-            <h2 className="text-2xl font-bold text-white text-center">Get in Touch</h2>
-            <p className="text-blue-100 text-center text-sm mt-2">Humse baat karne ke liye niche form bharein</p>
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 pb-20">
+        
+        {/* Info Section */}
+        <div className="lg:col-span-1 space-y-6">
+          <div className="bg-blue-700/30 p-8 rounded-3xl border border-blue-700">
+            <h3 className="text-2xl font-bold mb-6">Contact Info</h3>
+            <div className="space-y-6">
+              <p>📧 <span className="ml-2 font-bold">Email:</span> <br/> tajwarshaheen1011@example.com</p>
+              <p>📞 <span className="ml-2 font-bold">Phone:</span> <br/> +92 084637487</p>
+              <p>📍 <span className="ml-2 font-bold">Location:</span> <br/> Islamabad, Pakistan</p>
+            </div>
           </div>
-          
-          <form className="p-6 md:p-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
-            {/* Name Input */}
-            <div>
-              <label className="block text-sm font-semibold text-white mb-1">Full Name</label>
-              <input 
-                type="text" 
-                className="w-full px-4 py-3 rounded-xl bg-blue-900 border border-blue-700 text-white focus:bg-white focus:text-black focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
-                placeholder="Tajwar Shaheen"
-              />
-            </div>
+        </div>
 
-            {/* Email Input */}
-            <div>
-              <label className="block text-sm font-semibold text-white mb-1">Email Address</label>
-              <input 
-                type="email" 
-                className="w-full px-4 py-3 rounded-xl bg-blue-900 border border-blue-700 text-white focus:bg-white focus:text-black focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
-                placeholder="name@company.com"
-              />
+        {/* Form Section */}
+        <div className="lg:col-span-2 bg-blue-800 rounded-3xl p-8 text-slate-900 shadow-xl">
+          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="text" placeholder="First Name" className="p-3 border rounded-xl outline-blue-500 text-white" />
+              <input type="text" placeholder="Last Name" className="p-3 border rounded-xl outline-blue-500 text-white" />
             </div>
-
-            {/* Subject Dropdown */}
-            <div>
-              <label className="block text-sm font-semibold text-white mb-1">Subject</label>
-              <select className="w-full px-4 py-3 rounded-xl bg-blue-900 border border-blue-700 text-white focus:bg-white focus:text-black focus:border-blue-500 outline-none transition duration-200">
-                <option className='text-black'>General Inquiry</option>
-                <option className='text-black'>Support</option>
-                <option className='text-black'>Feedback</option>
-              </select>
-            </div>
-
-            {/* Message Input */}
-            <div>
-              <label className="block text-sm font-semibold text-white mb-1">Message</label>
-              <textarea 
-                rows="4" 
-                className="w-full px-4 py-3 rounded-xl bg-blue-900 border border-blue-700 text-white focus:bg-white focus:text-black focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
-                placeholder="Aapka message yahan likhein..."
-              ></textarea>
-            </div>
-
-            {/* Submit Button */}
-            <button 
-              type="submit" 
-              className="w-full bg-blue-600 hover:bg-white hover:text-blue-900 text-white font-bold py-3 px-6 rounded-xl transition duration-300 transform active:scale-95 shadow-lg"
-            >
+            <input type="email" placeholder="Email Address" className="w-full p-3 border rounded-xl outline-blue-500 text-white" />
+            <textarea rows="4"  placeholder="Your Message " className="w-full p-3 border rounded-xl outline-blue-500 text-white"></textarea>
+            <button className="w-full bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition">
               Send Message
             </button>
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default ContactForm;
+export default ContactPage;

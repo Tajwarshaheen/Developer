@@ -11,7 +11,7 @@ function Skill() {
   ];
 
   return (
-    <div className='bg-blue-900 min-h-screen py-10 px-5' >
+    <div className='bg-blue-900 min-h-screen py-10 px-5' id='skills' >
       {/* Header Section */}
       <h1 className='text-4xl md:text-6xl font-bold text-center'>
         <span className='text-white'>My</span> <span className='text-blue-500'>Skills</span>
