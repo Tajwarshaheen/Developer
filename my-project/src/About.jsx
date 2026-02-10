@@ -7,7 +7,7 @@ function About() {
         <h1 className='text-4xl md:text-6xl font-bold text-center'>
           <span className='text-white'>About</span> <span className='text-blue-500'>Me</span>
         </h1>
-        <p className='text-center text-white px-4'>Get to know more about my background and passion</p>
+        <p className='text-center text-white px-4'>Get to know more about my background and passion.</p>
       </div>
 
       <section className='min-h-screen bg-blue-900 flex flex-col md:flex-row items-center justify-between text-white p-6 md:p-10 gap-10'>
