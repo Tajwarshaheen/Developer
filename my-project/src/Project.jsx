@@ -1,17 +1,28 @@
 import React from 'react'
 
+import img1 from "../src/assets/images (1).jpg";
+import img2 from "../src/assets/images (2).jpg";
+import img3 from "../src/assets/images (3).jpg";
+import img4 from "../src/assets/images (4).jpg";
+import img5 from "../src/assets/images (5).jpg";
+import img6 from "../src/assets/download.jpg";
+
+const projects = [
+  { id: 1, title: "Ecom Platform", img: img1 },
+  { id: 2, title: "Portfolio Web", img: img2 },
+  { id: 3, title: "Chat App", img: img3 },
+  { id: 4, title: "Dashboard", img: img4 },
+  { id: 5, title: "Social Media", img: img5 },
+  { id: 6, title: "Web App", img: img6 },
+];
+
+
+
 function Project() {
   // Yahan images ke sahi naam check karein. 
   // Agar kisi image ka naam "download.jpg" tha (jo aapne pehle code mein likha tha), 
   // toh use array mein specific object banakar dena behtar hai.
-  const projects = [
-    { id: 1, title: "Ecom Platform", img: "../src/assets/images (1).jpg" },
-    { id: 2, title: "Portfolio Web", img: "../src/assets/images (2).jpg" },
-    { id: 3, title: "Chat App", img: "../src/assets/images (3).jpg" },
-    { id: 4, title: "Dashboard", img: "../src/assets/images (4).jpg" },
-    { id: 5, title: "Social Media", img: "../src/assets/images (5).jpg" },
-    { id: 6, title: "Web App", img: "../src/assets/download.jpg" }, // Yahan aapka download.jpg wapis aa gaya
-  ];
+
 
   return (
     <div  className='bg-blue-900 min-h-screen py-10 px-4' id='projects'>
