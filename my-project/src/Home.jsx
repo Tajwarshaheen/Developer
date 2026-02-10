@@ -8,7 +8,7 @@ function PortfolioHeader() {
         {/* Image Container */}
         <div className='w-full md:w-1/2 flex justify-center mt-10 md:mt-0'> 
           <img 
-            src="../src/assets/tajwar.jpg"
+            src="../public/tajwar.jpg"
             className="w-64 h-64 md:w-85 md:h-85 rounded-full shadow-xl border-blue-100 border-4 object-cover" 
             alt="Tajwar Shaheen"
           />
