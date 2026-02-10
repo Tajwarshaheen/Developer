@@ -34,7 +34,7 @@ function Project() {
                 onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Project+Coming+Soon' }}
               />
               
-              <div className='p-5 flex-grow'>
+              <div className='p-5 '>
                 <h1 className='text-2xl font-bold text-white'>{proj.title}</h1>
                 <p className='text-gray-300 text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
@@ -53,6 +53,7 @@ function Project() {
 
         </div>
       </section>
+      
   
     </div>
   )
