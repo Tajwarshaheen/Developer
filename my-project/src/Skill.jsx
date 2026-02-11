@@ -1,10 +1,10 @@
 import React from 'react'
 
 // Import Icons
-import reduxIcon from '../assets/icons/redux-original.svg'
-import mongoIcon from '../assets/icons/mongodb-original.svg'
-import nodeIcon from '../assets/icons/nodejs-original.svg'
-import gitIcon from '../assets/icons/git-original.svg'
+import reduxIcon from '../src/assets/icons/redux-original.svg'
+import mongoIcon from '../src/assets/icons/mongodb-original.svg'
+import nodeIcon from '../src/assets/icons/nodejs-original.svg'
+import gitIcon from '../src/assets/icons/git-original.svg'
 
 function Skill() {
 
