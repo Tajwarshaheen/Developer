@@ -2,12 +2,12 @@ import React from 'react'
 
 function Skill() {
   const skills = [
-    { name: "Frontend Developer", icon: "../src/assets/react.svg", desc: "React & Next.js" },
-    { name: "UI Styling", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", desc: "Tailwind CSS" },
-    { name: "Backend Dev", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", desc: "Node.js & Express" },
-    { name: "Database", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", desc: "MongoDB" },
-    { name: "Version Control", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", desc: "Git & GitHub" },
-    { name: "State Management", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", desc: "Redux Toolkit" },
+    { name: "Frontend Developer", icon: "../src/assets/icons/redux-original.svg", desc: "React & Next.js" },
+    { name: "UI Styling", icon: "../src/assets/icons/mongodb-original.svg", desc: "Tailwind CSS" },
+    { name: "Backend Dev", icon: "../src/assets/icons/nodejs-original.svg", desc: "Node.js & Express" },
+    { name: "Database", icon: "../src/assets/icons/mongodb-original.svg", desc: "MongoDB" },
+    { name: "Version Control", icon: "../src/assets/icons/git-original.svg", desc: "Git & GitHub" },
+    { name: "State Management", icon: "../src/assets/icons/redux-original.svg", desc: "Redux Toolkit" },
   ];
 
   return (
